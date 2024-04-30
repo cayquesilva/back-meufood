@@ -1,5 +1,5 @@
 import Search from "./_components/search";
-import Header from "./_components/ui/header";
+import Header from "./_components/header";
 
 export default function Home() {
   return (
