@@ -13,7 +13,7 @@ interface ProductListProps {
   }>[];
 }
 
-const ProductList = async ({ products }: ProductListProps) => {
+const ProductList = ({ products }: ProductListProps) => {
   //renderiza 1 item da categoria
 
   return (
