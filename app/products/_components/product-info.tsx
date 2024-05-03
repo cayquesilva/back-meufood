@@ -38,7 +38,7 @@ const ProductInfo = ({ product, complementaryProducts }: ProductInfoProps) => {
     });
 
   return (
-    <div className="rounder-tl-3xl relative mt-[-1.5rem] rounded-tr-3xl bg-white">
+    <div className="relative mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-white">
       <div className="flex items-center gap-[0.375rem] px-5">
         <div className="relative h-4 w-4">
           <Image
