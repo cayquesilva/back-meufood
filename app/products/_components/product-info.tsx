@@ -46,14 +46,14 @@ interface ProductInfoProps {
 
 const ProductInfo = ({ product, complementaryProducts }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
-  const [isCardOpen, setIsCardOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [isConfirmationDialogOpen, setIsConfirmationDialogOpen] =
     useState(false);
   const { addProductToCart, products } = useContext(CartContext);
 
   const addToCart = ({ emptyCart = false }: { emptyCart?: boolean }) => {
     addProductToCart({ product, quantity, emptyCart });
-    setIsCardOpen(true);
+    setIsCartOpen(true);
   };
 
   const handleIncreaseQuantityClick = () =>
@@ -159,12 +159,12 @@ const ProductInfo = ({ product, complementaryProducts }: ProductInfoProps) => {
         </div>
       </div>
 
-      <Sheet open={isCardOpen} onOpenChange={setIsCardOpen}>
+      <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
         <SheetContent className="w-[90vw]">
           <SheetHeader>
             <SheetTitle className="text-left">Sacola</SheetTitle>
           </SheetHeader>
-          <Cart />
+          <Cart setIsOpen={setIsCartOpen} />
         </SheetContent>
       </Sheet>
 
