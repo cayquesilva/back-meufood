@@ -70,7 +70,7 @@ const Cart = ({ setIsOpen }: CartProps) => {
       clearCart();
       setIsOpen(false);
 
-      toast("Pedido finalizado com sucesso!", {
+      toast.success("Pedido finalizado com sucesso!", {
         description: "Você pode acompanhá-lo na tela dos seus pedidos.",
         action: {
           label: "Meus Pedidos",
